@@ -1,0 +1,67 @@
+#mob_nav { position:fixed; left:0; top:-100%; width:100%; height:100%; background:#fff; font:14px/1 'AvenirNextCyrBold'; text-transform:uppercase; text-align:center; opacity:0; -webkit-transition:all 0.1s ease; transition:all 0.1s ease; z-index:2;}
+	#mob_nav.collapse.in { opacity:0; top:0;}
+		#mob_nav.collapse { top:-100%; opacity:1;}
+		#mob_nav.in { top:0; opacity:1; height:100% !important;}
+	#mob_nav ul { position:relative; top:50%; -webkit-transform:translateY(-50%); transform:translateY(-50%);}
+	#mob_nav li+li { margin-top:20px;}
+	#mob_nav .sel a, #mob_nav a:hover { color:#753e19;}
+
+@media screen and (max-width:1199px) {
+	.team_person { padding-right:0; margin-bottom:70px;}
+		.team_person+.team_person { padding:0;}
+		.team_text { min-height:0; margin-left:300px;}
+}
+
+@media screen and (max-width:1024px) {
+	*, body {
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-focus-ring-color: rgba(0,0,0,0);
+outline: none;
+-webkit-text-size-adjust: none;
+-webkit-appearance:none; -webkit-border-radius:0;}
+
+	input { float:left; width:calc(50% - 16px);}
+		input+input { margin-left:32px;}
+	textarea { width:100%;}
+
+	.breadcrumb { margin:27px 0 36px;}
+	
+	.contact_page .col-sm-2 { width:24%;}
+		.contact_page .col-sm-2+.col-sm-2 { width:8%;}
+	
+}
+
+@media screen and (max-width:768px) {
+	#bd { padding-top:90px;}
+	#hd { width:100%; height:50px; position:fixed; left:0; top:0; margin:0; z-index:2;}
+	#hd:after { height:50px !important;}
+		#hd .logo { left:20px; top:6px; z-index:1;}
+			#hd .logo img { width:80px;}
+		#hd .btn_mob_menu { display:block;}
+	#ft { text-align:center;}
+	.menuHeader, .menuFooter { display:none;}
+	.container { padding:0 20px;}
+	
+	.breadcrumb { margin:0 0 36px;}
+}
+
+@media screen and (max-width:767px) {
+	input { float:none; width:100%;}
+		input+input { margin:30px 0 0;}
+	textarea { width:100%; height:165px;}
+	
+	.contact_page .col-sm-2 { width:100%; padding-top:30px;}
+		.contact_page .col-sm-2+.col-sm-2 { width:100%;}
+	.contact_page .col-sm-8 { float:none;}
+	
+	.news_date { position:relative; top:0; width:auto; margin-bottom:10px; text-align:left;}
+		.news_date span { display:inline-block; font-size:13px; margin:0; padding:0; border:none;}
+	.news_list li, .news_page { padding-left:0;}
+	.news_page { margin-top:-40px;}
+	
+	.team_person { margin-bottom:40px;}
+		.team_name { margin-left:0; text-align:center;}
+		.team_foto { float:none; width:264px; margin:0 auto;}
+		.team_soc { margin-bottom:20px;}
+		.team_text { margin-left:0;}
+}
