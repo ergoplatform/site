@@ -72,7 +72,7 @@ body{ min-height:100%;}
 .row { position:relative;}
 	.row p { margin:0;}
 	.row p+p { margin-top:25px;}
-    .row a {color: #7d3516;}
+        .row a {color: #7d3516;}
 
 .menuSide {}
 	.menuSide .item { border-bottom:1px solid #e0e0e0; margin-bottom:26px; padding-bottom:6px;}
@@ -95,7 +95,7 @@ body{ min-height:100%;}
 	.soc_icon a:hover { background-color:#9a4a27;}
 		.soc_icon .tw { background-image:url(../img/icon_soc_tw.png);}
 		.soc_icon .fb { background-image:url(../img/icon_soc_fb.png);}
-		.soc_icon .email { background-image:url(../img/icon_soc_mail.png);}
+                .soc_icon .email { background-image:url(../img/icon_soc_mail.png);}
 .news_date { position:absolute; left:0; top:2px; width:35px; text-align:center; font-weight:700; font-size:13px; line-height:1; color:#aba2a4;}
 	.news_date span { display:block; font-size:30px; padding-bottom:2px; margin-bottom:9px; border-bottom:2px solid #aba2a4;}
 .news_list {}
@@ -125,3 +125,9 @@ body{ min-height:100%;}
 			.team_text .more_text_2 { display:none; -webkit-transition:all 0.3s ease; transition:all 0.3s ease;}
 		#team_more.in~.more .more_text_1 { display:none; opacity:0;}
 		#team_more.in~.more .more_text_2 { display:block; opacity:1;}
+
+.page404 { padding-top:133px; text-align:center;}
+	.page404 h1 { margin-bottom:7px;}
+	.page404 p { margin-bottom:34px;}
+	.page404 a { font-weight:700; color:#7d3516;}
+	.page404 a:hover { color:#a04117;}

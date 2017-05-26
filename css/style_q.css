@@ -64,4 +64,10 @@ outline: none;
 		.team_foto { float:none; width:264px; margin:0 auto;}
 		.team_soc { margin-bottom:20px;}
 		.team_text { margin-left:0;}
+	
+	.page404 { padding-top:25px;}
+}
+
+@media screen and (max-width:600px) {
+	.page404 { padding-top:0;}
 }
