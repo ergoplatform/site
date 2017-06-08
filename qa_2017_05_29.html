@@ -49,7 +49,84 @@
 						05.29
 					</div>
 					<h1>Q & A session with Alexander Chepurnoy</h1>
-					<p></p>
+					<p>
+						<b>What is the goal of the Ergo platform?</b><br>
+						The main goal is to provide guarantee of verification and running a program (with a certain length limit) and the ability to get done in a constant maximum time (and with constant maximum memory usage). A program should do exactly what's stated. While Ethereum can provide some guarantees for the former, nothing is guaranteed for the latter.<br>
+						Another goal: that Ergo be updated via soft forks only (at least the cryptographic part of it. Further research is needed for other constructions).We will be focused on soft forkability in particular. The next priority for the language would be related to payment channels.<br><br>
+						<b>Could you tell us more about Sigma language?</b><br>
+						The ideas behind the Sigma language date back to the beginning of 2016, or maybe even earlier. I made this sigma protocols presentation in early 2016 <a href="https://www.slideshare.net/AlexChepurnoy/sigma-protocols-and-zero-knowledge">https://www.slideshare.net/AlexChepurnoy/sigma-protocols-and-zero-knowledge</a><br>
+						It is not a fake TC language. You never know in advance what is doable. See for example the Ambisafe case (during DoS attacks on Eth). It might be described as a Bitcoin script on steroids.<br>
+						We're going to redesign things again and with a pretty conservative approach actually. Except in a couple of aspects. The design won’t be comparable with any existing cryptos directly<br>
+
+						I'll be presenting about Sigma language in July hopefully. Either in Moscow or Richmond, VA.  Github commits from me are happening basically every day.<br><br>
+
+						<b>When will the Ergo network launch?</b><br>
+						No concrete dates at the moment. We'll provide estimations as part of our yellow paper release. (We’re following Eth’s example here.)<br><br>
+						<b>Do you have a preliminary roadmap that shows when testnet and full nodes will be released?</b><br>
+						We are currently planning to launch testnet in September. We are anticipating up to three releases of testnet with three month gaps between upgrades. The first version would be without Sigma but would feature light SPV (via sublinear, interactive Proofs of Proof of Work), light full nodes (based on our work with Leo Reyzin) and Equihash for Pow (which may be changed in later versions). The goal for this first release would be to test these concepts and debug P2P layer.<br>
+						Subsequent releases will focus on Sigma and creating a new mining economy (which we are calling Space Scarce Economy.) We will be releasing a paper about Space Scarce Economy later this month.<br>
+						Can Ergo be mined with sha256 hardware and can you share more details about mining?
+						Ergo tokens will be mined into existence, but not with sha256 hardware. We’re still developing a concrete PoW algorithm. We would be happy to have conversations with miners about it. The plan is to fight with ASICs for sure.<br>
+						It could be Rollerchain <a href="https://arxiv.org/abs/1603.07926">https://arxiv.org/abs/1603.07926</a>, which is not friendly to GPU probably or Equihash (used in ZCash which could be friendly or not to GPU depending on algorithmic parameters.)<br>
+						The key question is whether to fight with GPUs or not. It’s an open question at the moment.<br>
+						I’d like to take some polls to get a sense of the community’s preference (like whether to fight with GPUs or not.) ASICs are evil anyway.<br>
+						There will be some updated difficulty readjustment function. In Bitcoin, average time between blocks is 9 mins 20 secs while planned is 10 minutes. With our proposal, it could be 9 mins 50 secs. Our improved function is trying to approximate a difficulty changing law. It works better than Bitcoin's if the law is not linear.<br><br>
+
+						<b>Will you need millions of $ worth of mining equipment for Ergo to compete with the big miners, or will every device be able to mine with the same chance of finding a block?</b><br>
+						We'll try to democratize mining.<br><br>
+
+						<b>What about funding?</b><br>
+						We're not asking for any funding at this point. So far we’ve just given away tokens for free.<br><br>
+
+						<b>So sharing is the driving-force, right?</b><br>
+
+						Basically, yes<br><br>
+
+						<b>Will there be any airdrops?</b><br>
+
+						100K EFYT was distributed to WCT holders at a rate of like 0.0167 EFYT per 1 WCT. Why? WCT was designed for such things. Holders of WCT got an ERGO token obligation called Ergo First Year Token.  Asset details can be found here: <a href="http://www.wavesgo.com/assets.html?725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46">http://www.wavesgo.com/assets.html?725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46</a><br><br>
+
+						<b>Will there be any more airdrops to WCT holders?</b><br>
+						Any airdrops will surely be in secret before happening, and we are not limiting them to WCT holders.<br>
+
+						A much smaller distribution will be sent out in a few weeks mostly consisting of bounties and payments (for example, the guy who designed our website was willing to get paid in EFYT, not fiat.)<br><br>
+
+						<b>Do you need translators?</b><br>
+
+						Translations would be good after whitepaper release.<br><br>
+
+						<b>When is the white paper coming?</b><br>
+						We're polishing whitepaper at the moment. We’re also preparing foundational papers. There is a lot of stuff to do even before starting on the Ergo code itself, but we're doing it.<br><br>
+
+						<b>What will be the total coin supply?</b><br>
+						When the platform is ready, there will be 100 million tokens issued during the first year. We'll have 10% of them and we'll convert EFYT to Ergo when we get them. For now I'm thinking about a buy back program in EFYT/Ergo pair, so you'll be able to get Egro tokens earlier at a lower percent, or later with 1:1 convertation. Anyway, after the first year of Ergo’s life (or earlier) EFYT tokens will be converted to Ergo coins.<br>
+
+						Only the first year supply is defined at the moment, but we'll have much bigger potential mining income than in Bitcoin. A paper on the overall economy is coming out this month. The issuance period will be short in comparison with Bitcoin.<br><br>
+
+
+						<b>What is liquid democracy?</b><br>
+
+						Liquid democracy is a feature we intend to integrate that will allow the community to vote on developments and expenditures in a completely private way. It’s a project involving two friends of mine at UK and US universities. I can’t share their names now due to some restrictions. But they are known names in electronic (cryptographic) voting. They're looking for devs to help with the project who have experience with Rust or C/C++. Please write me if you know a good qualified person who might be interested.<br><br>
+
+						<b>How about anon features like zero-knowledge proofs?</b><br>
+
+						That's in the language. Ring signatures will be for free.<br><br>
+
+						<b>Can Sigma language appear on Waves platform?</b><br>
+						On implementing Sigma tx language on the Waves platform, that's possible. But it’s too early to say anything concrete. I'm working on the language right now https://github.com/ScorexFoundation/sigmastate-interpreter. Most of my work is visible as usual. An initial paper will be available in the beginning of July.  Some proposals for Waves should be ready no earlier than Aug-Sep of this year.<br><br>
+
+						<b>Will the real Ergo tokens be tradable on Waves' DEX(with some inter-blockchain protocol or Ergo will have its own DEX?</b><br>
+						After Waves supports Sigma language, exchange will be possible via atomic cross-chain swapping.<br><br>
+
+						<b>Why would businesses want to choose blockchains with Sigma smart contract programming language over e.g. C# one? Which is more widespread and popular among programmers?</b><br>
+						The answer may be quite complicated:<br>
+						For general purpose language, there's no guarantee of termination of a non-trivial program (it could be the case only for some special languages e.g. Coq or Agda).<br>
+						It's hard (even impossible in theory) to estimate evaluation costs for programs on general purpose languages like C# before evaluation itself. This leads to continuous DDoS attacks, like the attacks to Ethereum last autumn. Sigma language cost analysis will be much easier. For example in Ethereum there is “a gas limit" so you can't create really complicated contracts.<br>
+						Also it's quite hard to estimate whether some contract is possible in Ethereum (within gas limit) or not. "Gas limit" is not constant, so your contract may work now, but in the future miners may reduce gas limit and you'll be out of business. In theory everything is possible in Turing-complete languages, but in practice this can lead to a lot of problems.<br>
+					</p>
+
+
+
 				</div>
 			</div>
 			<div class="col-lg-1"></div>
