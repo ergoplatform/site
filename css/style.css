@@ -108,11 +108,10 @@ body{ min-height:100%;}
 	.news_page h1 { line-height:38px; margin-bottom:20px}
 
 .faq_list {}
-	.faq_list li { border-bottom:1px solid #e0e0e0; padding:0 0 42px 70px; margin-bottom:14px; position:relative;}
+	.faq_list li { border-bottom:1px solid #e0e0e0; padding:0 0 42px 70px; margin-bottom:34px; position:relative;}
 		.faq_list li:last-child { border-bottom:0; padding-bottom:0;}
 	.faq_list h1 { line-height:38px; margin-bottom:20px}
 	.faq_list a { color:#7d3516;}
-	.faq_list p { height:20px; overflow:hidden;}
 
 .team_person { padding-right:30px;}
 	.team_person+.team_person { padding:0 0 0 30px;}
