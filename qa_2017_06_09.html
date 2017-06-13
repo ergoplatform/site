@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QA session</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_q.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="mob_nav" class="collapse in">
+    <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="tech.html">tech</a></li>
+        <li><a href="news_list.html">news</a></li>
+        <li class="sel"><a href="faq.html">FAQ</a></li>
+        <li><a href="team.html">team</a></li>
+        <li><a href="reach_us.html">contact us</a></li>
+    </ul>
+</div>
+<div id="bd">
+    <div id="hd">
+        <div class="logo"><a href="index.html" title="Ergo"><img src="img/logo.png" alt=""></a></div>
+        <a href="#" class="btn_mob_menu collapsed" data-toggle="collapse" data-target="#mob_nav"></a>
+        <ul class="menuHeader">
+            <li><a href="index.html">About</a></li>
+            <li><a href="tech.html">tech</a></li>
+            <li><a href="news_list.html">news</a></li>
+            <li class="sel"><a href="faq.html">FAQ</a></li>
+            <li><a href="team.html">team</a></li>
+            <li><a href="reach_us.html">contact us</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="row">
+            <ul class="breadcrumb">
+                <li>&nbsp;</li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-sm-12 col-lg-10">
+                <div class="news_page">
+                    <div class="news_date">
+                        <span class="news_date_day">08</span>
+                        06.09
+                    </div>
+                    <h1>Q & A session with Alex Chepurnoy and Dmitry Meshkov</h1>
+                    <p>
+                        <b>Do you have any announcements?</b><br>
+
+                    <ul type="circle">
+                        <li>A small distribution of tokens will be made next week to volunteers and collaborators.
+                        </li>
+
+                        <li>We would like to offer some tokens for thoughtful proposals on fair--and possibly
+                            private--ICO
+                            arrangements. After the recent BAT ICO, it seems there is need for a better way. If you have
+                            some expertise in this area and/or some innovative ideas to share about how the whole ICO
+                            process could be improved (especially be made more fair), please let us know.
+                        </li>
+
+                        <li>We're looking for Scala and Rust developers.</li>
+
+                        <li>We would like to get in touch with a mobile dev willing to write a simple PoC of light
+                            bootstrapping.
+                        </li>
+
+                        <li>Because ERGO is a perfect platform for data-intensive applications, we are thinking about
+                            launching two chains: MoneyChain and DataChain. They would each feature the same tech but
+                            possess different parameters. EFYT will be converted to both. (1&nbsp;ErgoMoney + 1&nbsp;ErgoData)
+                            First year emission will be the same for both. There will be sidechaining support, so it
+                            will be possible to e.g. release money in MoneyChain if some event happens in DataChain.
+                        </li>
+                    </ul>
+
+                    <b>Do you have any updates to your roadmap?</b><br>
+
+                    We've decided to create an initial version of testnet with features that are already implemented in
+                    prototypes. First verstion of testnet will contain:<br>
+
+                    1. Proofs of Proof of Work<br>
+                    2. Authenticated data structures<br>
+                    3. Equihash mining algorithm<br><br>
+
+                    Those features will be enough to launch testnet and start testing in terms of network protocol,
+                    performance, etc. Rollerchain, Sigma transactional language, and the economy model will be added in
+                    the second version of testnet. We hope the first version of testnet will be ready in September. It
+                    will be enough to start light node implementation. With this, we’ll be able to estimate whether
+                    it'll really be possible to have full node security guarantees on a smartphone.<br><br>
+
+                    <b>Is mainnet release still targeted for May 2018?</b><br>
+
+                    Yes. We are in no rush here.<br><br>
+
+                    <b>Any plans on how you will advertise Ergo?</b><br>
+
+                    Before our first version of testnet launches (testnet0) there will not be much advertising. We aim
+                    to begin real advertising around September. We will share those plans as we get closer.<br><br>
+
+                    <b>Will regular folks be able to run testnet node?</b><br>
+
+                    Sure. All code is always public and so it will be runnable.<br><br>
+
+                    <b>Will Waves' and Ergo's Sigma language implementation be the same?</b><br>
+
+                    There will be some differences as Ergo will use the UTXO model of system state, like Bitcoin. Waves
+                    on the other hand has been built on top of an account-based model like Ethereum or Nxt<br><br>
+
+                    <b>Which Integrated Development Environment (IDE) will be used first for smart contract programming
+                        in Sigma? Smart contracts could become pretty complicated so a decent dev environment (like for
+                        solidity) is a must. How will you test and debug?</b><br>
+
+                    To test and debug, context is needed (blockchain state). Some simulators will be there. Maybe even
+                    some fuzzing testing tools to cover areas of context domain a developer may not even be aware of
+                    when writing a script.<br><br>
+
+                    <b>Will cross chain communication be possible between Ergo and other platforms?</b><br>
+
+                    We may have atomic swap between Ergo and Waves when both support Sigma language. A swap with Bitcoin
+                    will be possible when the malleability problem is fixed. We’re still not sure about Ethereum. With
+                    Ethereum, sidechaining contracts is possible but may be prohibitively expensive for simple use cases
+                    considering current ETH prices. For some use cases, like ICO contracts, this is probably not a
+                    problem though.<br><br>
+
+                    <b>Do you have your own slack?</b><br>
+
+                    Not yet.<br><br>
+
+                    <b>How can you invest in this project?</b><br>
+
+                    Right now you can purchase EFYT on Waves DEX or at the Tidex exchange. Also, as we’ve mentioned in
+                    our announcements, we are always looking for people wanting to invest with their time to help us
+                    with papers, development, code, public relations and other needs that will arise.<br><br>
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+
+    </div>
+    <div class="empty_box"></div>
+</div>
+<div id="ft">
+    <div class="copy">&copy; Ergo, 2017</div>
+    <ul class="menuFooter">
+        <li><a href="index.html">About</a></li>
+        <li><a href="tech.html">tech</a></li>
+        <li class="sel"><a href="news_list.html">news</a></li>
+        <li><a href="team.html">team</a></li>
+        <li><a href="reach_us.html">contact us</a></li>
+    </ul>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
