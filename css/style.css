@@ -138,3 +138,7 @@ body{ min-height:100%;}
 	.page404 p { margin-bottom:34px;}
 	.page404 a { font-weight:700; color:#7d3516;}
 	.page404 a:hover { color:#a04117;}
+
+/*add 14022018*/
+.team_person { padding:0; margin-bottom:70px;}
+	.team_foto { width:264px; text-align:center;}
