@@ -4,7 +4,6 @@ h2 { font-weight:700; font-size:30px; line-height:29px; letter-spacing:0.03em; t
 #hd { margin-bottom:49px;}
 #hd:after { height:275px; background-size:cover;}
 .container_1 { background:url(../img/bg_ft.jpg) center top no-repeat; background-size:cover; padding:94px 0 0; color:#fff; position:relative;}
-.container_1:before { content:''; position:absolute; left:50%; top:-14px; margin-left:-44px; width:88px; height:89px; background:url(../img/logo_ft.png) center no-repeat;}
 #ft { color:#665558;}
 .menuFooter li:hover, .menuFooter .sel { border-color:#665558;}
 	.menuFooter a { color:#665558;}
