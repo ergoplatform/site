@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QA session</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style_q.css" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div id="mob_nav" class="collapse in">
+	<ul>
+		<li><a href="index.html">About</a></li>
+		<li><a href="tech.html">tech</a></li>
+		<li><a href="news_list.html">news</a></li>
+		<li class="sel"><a href="faq.html">FAQ</a></li>
+		<li><a href="team.html">team</a></li>
+		<li><a href="reach_us.html">contact us</a></li>
+	</ul>
+</div>
+<div id="bd">
+	<div id="hd">
+		<div class="logo"><a href="index.html" title="Ergo"><img src="img/logos/white_full.png" alt=""></a></div>
+		<a href="#" class="btn_mob_menu collapsed" data-toggle="collapse" data-target="#mob_nav"></a>
+		<ul class="menuHeader">
+			<li><a href="index.html">About</a></li>
+			<li><a href="tech.html">tech</a></li>
+			<li><a href="news_list.html">news</a></li>
+			<li class="sel"><a href="faq.html">FAQ</a></li>
+			<li><a href="team.html">team</a></li>
+			<li><a href="reach_us.html">contact us</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<div class="row">
+			<ul class="breadcrumb">
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-sm-12 col-lg-10">
+				<div class="news_page">
+					<div class="news_date">
+						<span class="news_date_day">19</span>
+						03.19
+					</div>
+					<h1>Q & A session with Alexander Chepurnoy and Dmitry Meshkov</h1>
+					<p>
+						<b>First, we have a major announcement - Ergo mainnet launch is planned for May 26 if no security vulnerabilities will be found during audit process!</b><br><br>
+						
+						<b>What are the vision about scaling and adoption?</b><br>
+						About scaling, the main approach is to avoid bloat without compromising functionality. E.g. persistent updateable storage is possible, with updates to be checked by a blockchain contract, but only digest of authenticated data structure (and some additional bytes, less than 40 bytes anyway) are stored in the UTXO set dependless on data set size. Storage rent is helping to remove dust from the UTXO set. Then light clients: in Ergo you can have full-node guarantees without storing UTXO set, if you do not mine. That's about much improved boostrapping and block validation times. With such improvements, it is possible to raise TPS without compromising classic blockchain assumptions and guarantees. Ok, but do you want concrete numbers? I don't have them, as parameters like block size etc are not set in stone, rather, miners can adjust them. So if a miner is experiencing low full block validation time (as hardware is getting better with time, as well as software), he may propose or vote to increase block size.<br><br>
+						On adoption, we expect following people to come: 1. People valuing social contract among the system and its users. E.g. people dissatisfied with Ethereum forking.  Ergo will not have hard-forks to update functionality, while it will be possible for community to upgrade the protocol in many aspects. 2. Because of (1) at least, and also limited supply, Ergo would be good as store-of-value asset (demurrage cost is small if you just store a coin in the system). 3. People who need for safe, simple, and and efficient financial applications. Ergo's Smart Money concept is much simpler that Ethereum's Smart Contracts, while powerful enough for most financial applications of the people not having very specific skills to develop Solidity contracts, or bunch of money to hire proficient devs. 4. Not ready to predict anything about big companies, but some businesses already expressing interest to do some tokens and contracts on top of Ergo. To early to announce anything though.<br><br>
+						
+						<b>Is there an example or usecase?</b><br>
+						We have many examples, contracts: oracles, crowdfunding, atomic cross-chains and single-chain (token-to-token) swaps, mixing, etc. Basic things are covered in the ErgoScript tutorial for developers <a href="https://docs.ergoplatform.com/ErgoScript.pdf">https://docs.ergoplatform.com/ErgoScript.pdf</a>.<br>
+						A document with more complex examples (cold wallets, mixing, Rock-Paper-Scissors game) will be published soon. Further, we'll show examples of ICO scenarios and a LETS system <a href="https://en.wikipedia.org/wiki/Local_exchange_trading_system">https://en.wikipedia.org/wiki/Local_exchange_trading_system</a>.<br>
+						Please also take a look at the targeted microcredit contract example from <a href="http://chepurnoy.org/blog/2018/10/smart-contracts-for-the-people/">"Smart contracts for the people"</a> blogpost.<br><br>
+
+						<b>Do you have intentions to build a native off-chain solution like lightning network? And what is your vision on community-driven approaches?</b><br>
+						Yes, we hope that they will occur at some point. Our goal now is to provide as flexible protocol as possible to make their implementation easy. Suprisely, we already have community members that are working on sidechain implementation on top of Ergo, but this work is in the early stage. We support any activity from our community, including sidechains)<br><br>
+						
+						<b>What blockchain project is similar to ERGO?</b><br>
+						In some aspects, Bitcoin (soft-forkability, but we're going much further), Coda (if it's the real thing, I need to check still; light client), Grin (FlyClient is similar to PoPoWs), ZCash (Equihash is similar to our PoW, but our params are stricter and our PoW is pool-resistant). Can not name anything like our language! So, in general, the Ergo is very unique.<br><br>
+
+						<b>What is ErgoData and what are its practical use cases? And how long after Mainnet is it going to be implemented?</b><br>
+						
+						ErgoData was planned to be a blockchain with the same technology under the hood, but different parameters to address needs of data-oriented applications. Now we're totally focused to launching the single chain and applications on top of it. I think ErgoData could come 2 or 3 years after, if there will be demand for such applications, and also based on applications limitations(especially, data-intensive) on top of Ergo may have. Supposedly, it will be a sidechain. Now there's good progress in this area, so supposedly by then we may have unconditionally good sidechains.<br><br>
+
+						<b>When can we start mining? and can we mine with cpu?</b><br>
+						For sure you can start mining with CPU right now. Just set up a full node (check this guide <a href="http://chepurnoy.org/blog/2019/01/how-to-set-up-and-configure-full-ergo-node/">http://chepurnoy.org/blog/2019/01/how-to-set-up-and-configure-full-ergo-node/</a> with mining = true config settings, and your node will start mining after the initial synchronization. Example config may be found at <a href="https://github.com/ergoplatform/ergo/blob/master/src/main/resources/nodeTestnet/application.conf">https://github.com/ergoplatform/ergo/blob/master/src/main/resources/nodeTestnet/application.conf</a><br><br>
+
+						<b>But we are not on mainnet yet? So we can only mine testnet coins?</b><br>
+						Yes, you can only mine testnet coins now. GPU miner will be definitely available before mainnet(probably this or next week).<br><br>
+
+						<b>Will there be a manual on how to setup a wallet?</b><br>
+
+						Wallet is one more thing that should be updated before mainnet launch, we take advice about it's secure setup and so on. For now you can only set up seed phrase as a plain text in your config file (section 2 in set up post <a href="http://chepurnoy.org/blog/2019/01/how-to-set-up-and-configure-full-ergo-node/">http://chepurnoy.org/blog/2019/01/how-to-set-up-and-configure-full-ergo-node/</a><br><br>
+
+						<b>What are the minimum requirements to run a node?</b><br>
+
+						It all depends on your node regime. We haven't measured it precisely, we turn our full nodes on droplets with 4 Gb memory, 2 CPU, 80 Gb SSD drive, but it is like recommended config, not a minimum one.<br><br>
+
+						<b>Are you planning any cooperation with other platforms (Waves for example)? What kind of?</b><br>
+						We're planning to be listed on Waves DEX (this will significantly simplify EFYT/ERG swap), no other cooperation with platforms is planned.<br><br>
+
+						<b>Do you have plans to add an option to generate ERC721 alike tokens? Tokens that can't be splitted.</b><br>
+
+						You can issue one token per transaction for free, so it is not a problem to issue a huge amount of tokens (with 1 max supply). There is no standard to unite them into a class of similar tokens (no standard way to check, that token aa...aa is of the same class of tokens as token `aa...bb`), but probably such kind of a standard will occur in the future.<br><br>
+
+						<b>Is there an option to broadcast a batch of transactions at the same time? Ideally them to be included in same block.</b><br>
+						There is no API method to broadcast batch of transactions at the same time, but nothing stops you from broadcasting them one by one with no delays. So the should not be a problem to broadcast as many transactions as you wish simultaneously.Regarding Ideally them to be included in same block - it is possible to write some kind of a contract, that ensures that some batch of transactions were included in a single block (or where none of them was included), however, we haven't tried it yet. In addition this may require a miner with modifier rules of collecting transactions from mempool.<br><br>
+
+						<b>Is there an option to send transaction with 0 value asset?</b><br>
+						So the token is in the transaction, but it's amount is 0? No, that's not possible<br><br>
+
+						<b>Is there an option to send "sponsored" transaction? The transaction which fee is paid by a custom token.</b><br>
+
+						It might be done using the exchange example, so you can create a contract that buys your token for Ergo, and when a sender is going to send a token - he sells required amount of token and makes a transfer of the remaining amount of tokens inside one transaction.<br><br>
+
+						<b>So there is no way to transfer 0.0000001 of token?</b><br>
+
+						Every output in Ergo should have some amount of Erg in it. Transaction fee may be 0, but you should put some Erg amount to every output created.<br><br>
+
+					</p>
+
+
+
+				</div>
+			</div>
+			<div class="col-lg-1"></div>
+		</div>
+
+	</div>
+	<div class="empty_box"></div>
+</div>
+<div id="ft">
+	<div class="copy">&copy; Ergo, 2018</div>
+	<ul class="menuFooter">
+		<li><a href="index.html">About</a></li>
+		<li><a href="tech.html">tech</a></li>
+		<li class="sel"><a href="news_list.html">news</a></li>
+		<li><a href="team.html">team</a></li>
+		<li><a href="reach_us.html">contact us</a></li>
+	</ul>
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
